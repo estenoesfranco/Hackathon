@@ -83,8 +83,8 @@ function App() {
           <h2>{datos.name}</h2>
           <p>Temperatura: {Math.round(datos.main.temp - 273.15)}°C</p>
           <p>Clima: {datos.weather[0].description}</p>
-          <p>Humedad: {datos.weather[0].description}</p>
-          <p>Velocidad del viento: {datos.weather[0].description}</p>
+          <p>Humedad: {datos.main.humidity}%</p>
+          <p>Velocidad del viento: {datos.wind.speed}Km/h</p>
         </div>
       )}
     </div>
