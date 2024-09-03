@@ -1,7 +1,7 @@
 function Consultas(props){
 
 
-    return()
+    return(z)
 }
 
 export default Consultas;
