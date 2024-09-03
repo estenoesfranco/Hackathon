@@ -27,3 +27,9 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.body{
+  background: rgb(255,207,210);
+background: linear-gradient(90deg, rgba(255,207,210,1) 0%, rgba(255,184,209,1) 48%, rgba(255,158,158,1) 100%);
+}
