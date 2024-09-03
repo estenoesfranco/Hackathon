@@ -1,30 +1,22 @@
 import { useState, useEffect } from 'react'
-import Consultas from './components/Consultas';
+import axios from 'axios'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [datos, setDatos] = useState(null)
 
   useEffect(()=>{
-    fetch('http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=fe4ed6407da8fdf33dce908d359ef45a')
-        .then(res=>res.json())
-            .then(json=>{setDatos(json)})
+    axios.get('https://api.openweathermap.org/data/2.5/weather?q=Loon&appid=fe4ed6407da8fdf33dce908d359ef45a')
+            .then(res=>{setDatos(res.data)})
             console.log(datos)
 },[]);
 
-useEffect(()=>{
-  fetch('http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=fe4ed6407da8fdf33dce908d359ef45a')
-      .then(res=>res.json())
-          .then(json=>{setDatos(json)})
-          console.log(datos)
-},[]);
-
+  
   return (
     <>
     <div>
-      <Consultas/>
-      <h1>Hola Mundo!</h1>
-    </div>  
+      <h1>¡Hola mundo!</h1>
+    </div>
     </>
   )
 }
